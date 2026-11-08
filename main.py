@@ -85,7 +85,7 @@ books = [
 ]
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return send_from_directory(app.root_path, "index.html")
 
 @app.route("/api/books")
 def get_books():
