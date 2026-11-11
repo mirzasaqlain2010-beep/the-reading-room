@@ -97,6 +97,14 @@ def style():
 @app.route("/script.js")
 def script():
     return app.send_static_file("script.js")
+    @app.route("/script.js")
+def javascript():
+    return send_from_directory(app.root_path, "script.js")
+
+
+@app.route("/style.css")
+def css():
+    return send_from_directory(app.root_path, "style.css")
 
 
 if __name__ == "__main__":
